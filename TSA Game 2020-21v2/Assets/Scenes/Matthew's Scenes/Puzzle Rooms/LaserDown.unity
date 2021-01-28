@@ -1849,6 +1849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Respawn
       objectReference: {fileID: 0}
+    - target: {fileID: 8710494476418506088, guid: d6fab8d1d6dee48da9f6aec931c2662e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8710494476418506090, guid: d6fab8d1d6dee48da9f6aec931c2662e,
         type: 3}
       propertyPath: m_LocalPosition.x

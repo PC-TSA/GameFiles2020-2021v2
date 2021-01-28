@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7157339898061870799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de7218f677a74b0ab2aaf6aeeaea74d, type: 3}
+  m_Script: {fileID: 11500000, guid: 86d553e0bba36924ba5014215ba24c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7157339898061870799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e3c7f83f92544d4b279d6c6c618633, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cbc717311ad6314c8c2cb96566a299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7157339898061870799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ad01c35b186846a698fa0a5c995f1e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 22591ed84ab5e634fa798597cfe92b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
@@ -301,7 +301,8 @@ PrefabInstance:
       propertyPath: scaleFactor
       value: 20
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4470448245588361023, guid: 17f336f1f583640238a1755c75615d7e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17f336f1f583640238a1755c75615d7e, type: 3}
 --- !u!224 &8862915838641579052 stripped
 RectTransform:

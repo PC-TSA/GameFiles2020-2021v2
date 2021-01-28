@@ -109,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1456884406466651858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271f26528c07a4e6ca9cb5b7b5588e3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2279267edecc63640a5be69631b9580f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scaleFactor: 0
@@ -204,7 +204,6 @@ GameObject:
   - component: {fileID: 3342212486834127178}
   - component: {fileID: 3342212486834127183}
   - component: {fileID: 3342212486834127176}
-  - component: {fileID: 3342212486834127177}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -268,19 +267,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3342212486834127177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3342212486834127179}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271f26528c07a4e6ca9cb5b7b5588e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleFactor: 0
 --- !u!1 &3342212487048815198
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +374,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3342212487048815198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 666af1e40035d4a6b9efd0afc25a3681, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dd620169e601ab4cae78c2aef573407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shootFreq: 1
@@ -402,7 +388,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3342212487048815198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de7218f677a74b0ab2aaf6aeeaea74d, type: 3}
+  m_Script: {fileID: 11500000, guid: 86d553e0bba36924ba5014215ba24c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
@@ -416,7 +402,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3342212487048815198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ad01c35b186846a698fa0a5c995f1e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 22591ed84ab5e634fa798597cfe92b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0

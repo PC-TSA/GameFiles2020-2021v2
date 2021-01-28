@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3498842362509276345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa324975559324a0387d4efa5b44f6b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 496645c474df8a64c906d8a674018261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shootSpeed: 100
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3498842362509276345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ad01c35b186846a698fa0a5c995f1e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 22591ed84ab5e634fa798597cfe92b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10

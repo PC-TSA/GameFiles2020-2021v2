@@ -233,7 +233,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 3348371947559214669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d7f31909afc548dba8c651f536ade07, type: 3}
+  m_Script: {fileID: 11500000, guid: cbc32e563be8e8342a627de6b7fe8cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: 0
+  elect: 0
+  cl: {fileID: 3348371947559214678}
+  parts: {fileID: 6859684249212993482}
+  breakForce: 5
+  attractDis: 10
+  attractForce: 3
+--- !u!114 &3348371947559214678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348371947559214669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f1255c96f9c204e8c7e79469864c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCollisions: []
+  electReq: 0
+  ps: {fileID: 0}
+  breakForce: 0
+--- !u!114 &3348371947559214668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348371947559214669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493264fceae10784791159eac5793e38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   needsElec: 0
@@ -246,41 +281,6 @@ MonoBehaviour:
   pointIndex: 0
   stopMoving: 0
   startActive: 1
---- !u!114 &3348371947559214678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3348371947559214669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36dbaf11e691402681569ffdb0f3b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: 0
-  elect: 0
-  cl: {fileID: 3348371947559214668}
-  parts: {fileID: 6859684249212993482}
-  breakForce: 5
-  attractDis: 10
-  attractForce: 3
---- !u!114 &3348371947559214668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3348371947559214669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78420cf76138042b296f23fbad48f539, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCollisions: []
-  electReq: 0
-  ps: {fileID: 6859684249212993482}
-  breakForce: 0
 --- !u!54 &3348371947559214677
 Rigidbody:
   m_ObjectHideFlags: 0

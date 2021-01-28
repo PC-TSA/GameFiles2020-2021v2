@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3503437209354134449}
   - component: {fileID: 3503437209354134462}
   - component: {fileID: 3503437209354134453}
-  - component: {fileID: 3503437209354134455}
   - component: {fileID: 3503437209354134460}
+  - component: {fileID: 7580064921838491023}
   m_Layer: 0
   m_Name: FlappyBoi
   m_TagString: Enemy
@@ -107,11 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3503437209354134463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de7218f677a74b0ab2aaf6aeeaea74d, type: 3}
+  m_Script: {fileID: 11500000, guid: 86d553e0bba36924ba5014215ba24c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
-  health: 30
+  maxHealth: 10
+  health: 10
 --- !u!54 &3503437209354134453
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,19 +128,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3503437209354134455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3503437209354134463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ad01c35b186846a698fa0a5c995f1e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
 --- !u!114 &3503437209354134460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +137,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 3503437209354134463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cedfe2e019ba34c5d911d4963ae12185, type: 3}
+  m_Script: {fileID: 11500000, guid: 22591ed84ab5e634fa798597cfe92b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+--- !u!114 &7580064921838491023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503437209354134463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f01a06c361a852459991629a2cb7b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vertSpeed: 1
@@ -306,7 +306,8 @@ PrefabInstance:
       propertyPath: scaleFactor
       value: 20
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4470448245588361023, guid: 17f336f1f583640238a1755c75615d7e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17f336f1f583640238a1755c75615d7e, type: 3}
 --- !u!224 &2968481131284861276 stripped
 RectTransform:
