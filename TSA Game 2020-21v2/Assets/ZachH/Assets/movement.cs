@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    public float sensitivity = 3f;
+    public float speed = 3f;
+    float sensitivity;
+    public float shiftMultiplier = 1.5f;
     float jumpSpeed = 10f;
     public CharacterController ch;
     float gravity = 20f;
     float y = 0;
 
     float vSpeed = 0;
+
+    private void Start()
+    {
+        sensitivity = speed;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,11 +29,11 @@ public class movement : MonoBehaviour
         moveDirection = transform.TransformDirection(moveDirection);
         if (Input.GetKey("left shift"))
         {
-            sensitivity = 5;
+            sensitivity = speed*shiftMultiplier;
         }
         else
         {
-            sensitivity = 2f;
+            sensitivity = speed;
         }
         moveDirection *= sensitivity;
 
