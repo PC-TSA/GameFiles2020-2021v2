@@ -321,7 +321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: {fileID: 3380567607123262052}
   eleComp: {fileID: 0}
-  mmp: {fileID: 0}
+  doElect: 0
+  doMov: 1
 --- !u!1 &9181529831978744501
 GameObject:
   m_ObjectHideFlags: 0

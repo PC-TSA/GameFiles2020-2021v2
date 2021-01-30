@@ -5,25 +5,51 @@ using UnityEngine;
 public class ElectActivate : MonoBehaviour
 {
     public GameObject go;
-    public Electricity eleComp;
-    public MattMovPlat mmp;
+    private Electricity eleComp;
+    public bool doElect = false;
+    public bool doMov = false;
+    private MattMovPlat mmp;
+    private Electricity eOther;
     // Start is called before the first frame update
     void Start()
     {
         eleComp = GetComponent<Electricity>();
-        mmp = go.GetComponent<MattMovPlat>();
+        if (doMov)
+        {
+            mmp = go.GetComponent<MattMovPlat>();
+        }
+        if (doElect)
+        {
+            eOther = go.GetComponent<Electricity>();
+        }
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         if (eleComp.elect)
         {
-            mmp.Activate();
+            if (doMov)
+            {
+                mmp.Activate();
+            }
+            if (doElect)
+            {
+                eOther.Power();
+            }
+            
         }
         else
         {
-            mmp.Deactivate();
+            if (doMov)
+            {
+                mmp.Deactivate();
+            }
+            if (doElect)
+            {
+                eOther.Depower();
+            }
         }
     }
 }
