@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class cutSceneScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class cutSceneScript : MonoBehaviour
     public int[] delays;
     private bool enter = true;
     int time;
+    public string nextScene;
     
     // Update is called once per frame
     private void OnEnable()
@@ -27,8 +29,8 @@ public class cutSceneScript : MonoBehaviour
             mainImage.sprite = cutImages[i];
             storyText.text = textArr[i];
             yield return new WaitForSeconds(delays[i]);
-
         }
+        SceneManager.LoadScene(nextScene);
     }
 
     
