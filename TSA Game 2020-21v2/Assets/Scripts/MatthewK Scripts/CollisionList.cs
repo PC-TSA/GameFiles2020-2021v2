@@ -131,6 +131,14 @@ public class CollisionList : MonoBehaviour
                 //go.GetComponent<Electricity>().parts.Play();
             }
         }
+        if (GetComponent<ElectActivate>() != null && GetComponent<ElectActivate>().doElect)
+        {
+            if (!GetComponent<ElectActivate>().go.GetComponent<Electricity>().source && !chekd.Contains(GetComponent<ElectActivate>().go) && !GetComponent<ElectActivate>().go.CompareTag("Lava Powered"))
+            {
+                chekd.Add(GetComponent<ElectActivate>().go);
+                GetComponent<ElectActivate>().go.GetComponent<CollisionList>().Activate(chekd);
+            }
+        }
     }
     public void Deactivate(List<GameObject> chekd)
     {
@@ -145,6 +153,15 @@ public class CollisionList : MonoBehaviour
             }
             
         }
+        if (GetComponent<ElectActivate>() != null && GetComponent<ElectActivate>().doElect)
+        {
+            if (!GetComponent<ElectActivate>().go.GetComponent<Electricity>().source && !chekd.Contains(GetComponent<ElectActivate>().go) && !GetComponent<ElectActivate>().go.CompareTag("Lava Powered"))
+            {
+                chekd.Add(GetComponent<ElectActivate>().go);
+                GetComponent<ElectActivate>().go.GetComponent<CollisionList>().Deactivate(chekd);
+            }
+        }
+        
     }
     bool HasSource()
     {
@@ -178,6 +195,29 @@ public class CollisionList : MonoBehaviour
                 }
                 
             }
+            
+        }
+        if (GetComponent<ElectActivate>() != null)
+        {
+            if(GetComponent<ElectActivate>().doElect)
+            {
+                if (!chekd.Contains(GetComponent<ElectActivate>().go) && GetComponent<ElectActivate>().go.GetComponent<Electricity>().elect)
+                {
+
+                    if (GetComponent<ElectActivate>().go.GetComponent<Electricity>().source)
+                    {
+                        return true;
+                    }
+                    chekd.Add(GetComponent<ElectActivate>().go);
+                    if (!GetComponent<ElectActivate>().go.CompareTag("Lava Powered") && RecurHasSource(Handy.Sub(GetComponent<ElectActivate>().go.GetComponent<CollisionList>().currentCollisions, chekd), chekd))
+                    {
+                        return true;
+                    }
+
+                }
+            }
+            
+            
             
         }
         return false;
