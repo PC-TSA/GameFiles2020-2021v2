@@ -34,10 +34,12 @@ public class ElectActivate : MonoBehaviour
             {
                 mmp.Activate();
             }
+            /*
             if (doElect)
             {
                 eOther.Power();
             }
+            */
             
         }
         else
@@ -46,10 +48,11 @@ public class ElectActivate : MonoBehaviour
             {
                 mmp.Deactivate();
             }
+            /*
             if (doElect)
             {
                 eOther.Depower();
-            }
+            }*/
         }
     }
 }
