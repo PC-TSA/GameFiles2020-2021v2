@@ -380,14 +380,14 @@ RectTransform:
   m_GameObject: {fileID: 1025832370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
-  m_LocalScale: {x: 4.8092775, y: 3.0154474, z: 2.8696682}
+  m_LocalScale: {x: 4.9726286, y: 3.5317914, z: 3.491238}
   m_Children: []
   m_Father: {fileID: 3775908713223605785}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29, y: 2}
+  m_AnchoredPosition: {x: -51, y: 58.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025832372
@@ -404,13 +404,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 1025832373}
   cutImages:
-  - {fileID: 21300000, guid: 4141f879d684f2248901260ea9de509f, type: 3}
+  - {fileID: 21300000, guid: b1be3a234ef9ff74a8180e6b98403713, type: 3}
+  - {fileID: 21300000, guid: f91d96cfabf39af4ea35c4e9bc793452, type: 3}
+  - {fileID: 21300000, guid: b98c039ff96d42a41b4f1e369775501c, type: 3}
+  - {fileID: 21300000, guid: 6dd3a7dc01b91ef4fbf4915f9b3a92ba, type: 3}
   - {fileID: 21300000, guid: dd8fd27da033c514a9ffd5cd71048efd, type: 3}
   textArr:
-  - This is the first image text
-  - This is the text for the second image
+  - The summer of 1967 was unlike any that the town of TOWN had previously experienced
+  - ' Several individuals with magical powers would appear every few weeks. When
+    asked about their origin or purpose, they were silent'
+  - Rumours began to circulate that the legendary ORB was the source of these powers,
+    and that someone had discovered the ruined temple where the ORB was kept
+  - GIRL built devices to replicate these magical powers, hoping to gain access to
+    the temple and discover its secrets
+  - 'With her work complete, GIRL sets off into the forest, unsure of what lies ahead... '
   storyText: {fileID: 1184940637}
-  delays: 0500000005000000
+  delays: 0500000007000000070000000700000005000000
   nextScene: Terrain Test
 --- !u!114 &1025832373
 MonoBehaviour:
@@ -431,7 +440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4141f879d684f2248901260ea9de509f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1be3a234ef9ff74a8180e6b98403713, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -575,8 +584,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46, y: -98}
-  m_SizeDelta: {x: 402.9, y: 71.1}
+  m_AnchoredPosition: {x: 0, y: -181}
+  m_SizeDelta: {x: 585.7, y: 71.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184940637
 MonoBehaviour:
@@ -591,20 +600,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 511ad1b3b07542945b6761efe465c400, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 7
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -646,7 +655,7 @@ RectTransform:
   m_GameObject: {fileID: 1354587707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
-  m_LocalScale: {x: 6.8012395, y: 4.058261, z: 4.058261}
+  m_LocalScale: {x: 8.274387, y: 4.93728, z: 4.93728}
   m_Children:
   - {fileID: 727339010}
   - {fileID: 575573564}
@@ -657,7 +666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 2}
+  m_AnchoredPosition: {x: -34.217014, y: 58.59999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354587709
@@ -853,8 +862,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2276521663268523224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 371.3921, y: 1172.0564, z: -4737.1514}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 361.52, y: 935.11, z: -3488.5}
+  m_LocalScale: {x: 0.73586, y: 0.73586, z: 0.73586}
   m_Children:
   - {fileID: 3775908713223605785}
   - {fileID: 3775908713294603756}
