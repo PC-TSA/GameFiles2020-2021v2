@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8162124447889959357}
   - component: {fileID: 1102298550233016265}
   m_Layer: 0
-  m_Name: Electrified
+  m_Name: YellowElectrified
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4709,7 +4709,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 675ce5b50c47b45248cdb80313cbe09e, type: 2}
+  - {fileID: 2100000, guid: 55f1c0dd44f5e417a8629d731bd7b047, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
