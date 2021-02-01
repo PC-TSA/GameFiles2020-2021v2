@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Game/Main Menu.unity
     guid: b64a53e4dcd76a245b0e2f5c28564d45
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Matthew's Scenes/Menu.unity
     guid: 8c0f50eb4dee543fd9d66df707468241
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Matthew's Scenes/Puzzle Rooms/Parkour.unity
     guid: 12b267440a55d4e4f8730ee5f77345a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Matthew's Scenes/Puzzle Rooms/Sequence.unity
     guid: d5b899ea995f446d284fb40fce94c8ee
   - enabled: 1
@@ -23,7 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Game/Forest.unity
     guid: e705020742e5fb040afb11d497cc08a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Terrain Test.unity
     guid: 6c943a87a4d04bf45b4a5fe656be7ae5
+  - enabled: 1
+    path: Assets/Scenes/Final Game/Temple.unity
+    guid: e074c8c9f0543e24b92caad85d6c3bc8
   m_configObjects: {}

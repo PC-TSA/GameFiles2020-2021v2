@@ -420,7 +420,7 @@ MonoBehaviour:
   - 'With her work complete, GIRL sets off into the forest, unsure of what lies ahead... '
   storyText: {fileID: 1184940637}
   delays: 0500000007000000070000000700000005000000
-  nextScene: Terrain Test
+  nextScene: Forest
 --- !u!114 &1025832373
 MonoBehaviour:
   m_ObjectHideFlags: 0
