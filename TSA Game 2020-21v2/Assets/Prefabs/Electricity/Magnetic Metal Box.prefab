@@ -5083,6 +5083,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: -6007775932878453246, guid: bf75f63557670e545b8b60fc2b301876,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ad3f7409b8e0eb479d809a44ce4dc4c, type: 2}
+    - target: {fileID: -2922819304951010787, guid: bf75f63557670e545b8b60fc2b301876,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ef257ff59e0e84af296625d2295d8cc2, type: 2}
     - target: {fileID: 630802283892159582, guid: bf75f63557670e545b8b60fc2b301876,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

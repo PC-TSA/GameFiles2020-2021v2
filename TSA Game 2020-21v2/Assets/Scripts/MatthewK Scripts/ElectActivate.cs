@@ -8,6 +8,7 @@ public class ElectActivate : MonoBehaviour
     private Electricity eleComp;
     public bool doElect = false;
     public bool doMov = false;
+    public bool activateOnce = true; //if true, the platform will not deactivate when the power stops
     private MattMovPlat mmp;
     private Electricity eOther;
     // Start is called before the first frame update
@@ -44,7 +45,7 @@ public class ElectActivate : MonoBehaviour
         }
         else
         {
-            if (doMov)
+            if (doMov && !activateOnce)
             {
                 mmp.Deactivate();
             }
