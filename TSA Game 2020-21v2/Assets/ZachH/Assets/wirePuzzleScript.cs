@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class wirePuzzleScript : MonoBehaviour
@@ -13,11 +14,17 @@ public class wirePuzzleScript : MonoBehaviour
     public Vector2 selectedWire = new Vector2(0, 0);
     public Vector2 selected;
     public Material previous;
+    public Material selectedMaterial;
+    public Material unselectedMaterial;
+    public bool correct = false;
+    public bool[,] answerKey = { {true, true, true, false, false }, { false, false, true, false, false}, { false, false, true, true, true} };
+    
     void Start()
     {
         wireMatArr = new Material[rows, columns];
         wireArr = new GameObject[rows, columns];
         wireState = new bool[rows, columns];
+      
         for (var i = 0; i < rows; i++)
         {
 
@@ -31,9 +38,9 @@ public class wirePuzzleScript : MonoBehaviour
 
         }
         previous = wireMatArr[0, 0];
-        selected = new Vector2(0, 3);
+        selected = new Vector2(2, 2);
 
-
+        
     }
      void Update()
     {
@@ -48,7 +55,10 @@ public class wirePuzzleScript : MonoBehaviour
         }
         updateSelected();
         string block = selected.x + "," + (int)selected.y;
+
         wireState[(int)selected.x, (int)selected.y] = GameObject.Find(block).GetComponent<state>().wireState;
+        correct = checkForCorrect(answerKey);
+
     }
 
   /* public bool checkForCorrect()
@@ -58,6 +68,9 @@ public class wirePuzzleScript : MonoBehaviour
     }*/
     public void updateSelected()
     {
+        string block = selected.x + "," + (int)selected.y;
+        GameObject.Find(block).GetComponent<state>().isSelected = false;
+
         if (Input.GetKeyDown("a") && selected.y > 0)
         {
             selected = new Vector2((int) selected.x, (int) selected.y-1);
@@ -82,12 +95,17 @@ public class wirePuzzleScript : MonoBehaviour
             updateSelectedColor(wireMatArr[(int)selected.x, (int)selected.y]);
 
         }
+        
+        block = selected.x + "," + (int)selected.y;
+        GameObject.Find(block).GetComponent<state>().isSelected = true;
+        
     }
 
     public void updateSelectedColor(Material newSelected)
     {
-        previous.color = Color.white;
-        newSelected.color = Color.green;
+        previous.color = unselectedMaterial.color;
+        previous.SetFloat("_Metallic", .75f);
+        newSelected.color = selectedMaterial.color;
         previous = newSelected;
         
 
@@ -111,6 +129,35 @@ public class wirePuzzleScript : MonoBehaviour
 
         }
         
+
+
+    }
+    bool checkForCorrect(bool[,] correctArray)
+    {
+        bool correct = false;
+        for (var i = 0; i < rows; i++)
+        {
+
+            for (var j = 0; j < columns; j++)
+            {
+                if (wireState[i,j] == correctArray[i,j])
+                {
+                    correct = true;
+                    if (correct == false )
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+
+        }
+        return true;
+
 
 
     }
