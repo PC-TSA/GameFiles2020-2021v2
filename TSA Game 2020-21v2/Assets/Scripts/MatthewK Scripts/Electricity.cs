@@ -13,6 +13,7 @@ public class Electricity : MonoBehaviour
     public float breakForce;
     public float attractDis;
     public float attractForce;
+    public bool isSphere = false;
     // Start is called before the first frame update
     void Start()
     {

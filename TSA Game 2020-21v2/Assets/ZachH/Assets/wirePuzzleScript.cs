@@ -59,8 +59,9 @@ public class wirePuzzleScript : MonoBehaviour
         wireState[(int)selected.x, (int)selected.y] = GameObject.Find(block).GetComponent<state>().wireState;
         correct = checkForCorrect(answerKey);
         Debug.Log(correct);
-        if (correct == true)
+        if (correct)
         {
+            Debug.Log("deactivating puzzle");
             activate.deactivatePuzzle();
         }
 
@@ -148,6 +149,7 @@ public class wirePuzzleScript : MonoBehaviour
                 if (wireState[i,j] == correctArray[i,j])
                 {
                     correct = true;
+                    Debug.Log("correct");
                     if (correct == false )
                     {
                         return false;

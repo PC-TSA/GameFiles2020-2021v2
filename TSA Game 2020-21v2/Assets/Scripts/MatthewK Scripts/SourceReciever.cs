@@ -23,7 +23,7 @@ public class SourceReciever : MonoBehaviour
 
         if (other.GetComponent<Electricity>() != null)
         {
-            if (other.GetComponent<Electricity>().source)
+            if (other.GetComponent<Electricity>().isSphere)
             {
                 GetComponent<Electricity>().source = true;
                 GetComponent<Electricity>().Power();
