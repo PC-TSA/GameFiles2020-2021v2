@@ -16,8 +16,9 @@ public class SourceReciever : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter(Collision collision)
+   IEnumerator OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collision");
         GameObject other = collision.gameObject;
 
         if (other.GetComponent<Electricity>() != null)
@@ -26,8 +27,16 @@ public class SourceReciever : MonoBehaviour
             {
                 GetComponent<Electricity>().source = true;
                 GetComponent<Electricity>().Power();
-                Destroy(other);
+                //Destroy(other);
+                other.layer = 0;
+                other.GetComponent<Electricity>().source = false;
+                yield return new WaitForSeconds(0.5f);
+                other.GetComponent<Rigidbody>().freezeRotation = true;
+                other.GetComponent<Rigidbody>().isKinematic = false;
+                Debug.Log("destroyed");
             }
         }
     }
+
+    
 }

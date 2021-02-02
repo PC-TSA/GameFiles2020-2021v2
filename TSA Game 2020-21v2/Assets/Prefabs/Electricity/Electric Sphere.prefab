@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6842146854232018322}
   - component: {fileID: 6842146854232018331}
   - component: {fileID: 3477761129304091302}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: Electric Sphere
   m_TagString: Electric
   m_Icon: {fileID: 0}
@@ -264,6 +264,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6842146854232018328}
     m_Modifications:
+    - target: {fileID: 901576145398244453, guid: 9430bf11601562c429765530d5904258,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539134879587041125, guid: 9430bf11601562c429765530d5904258,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644628603967545461, guid: 9430bf11601562c429765530d5904258,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3827755233892269955, guid: 9430bf11601562c429765530d5904258,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -334,6 +349,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 17.794168
       objectReference: {fileID: 0}
+    - target: {fileID: 3829093139606991163, guid: 9430bf11601562c429765530d5904258,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4491561857348937017, guid: 9430bf11601562c429765530d5904258,
         type: 3}
       propertyPath: m_Name
@@ -343,6 +363,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491561857348937017, guid: 9430bf11601562c429765530d5904258,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546418770683779909, guid: 9430bf11601562c429765530d5904258,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056785799927818015, guid: 9430bf11601562c429765530d5904258,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9430bf11601562c429765530d5904258, type: 3}
