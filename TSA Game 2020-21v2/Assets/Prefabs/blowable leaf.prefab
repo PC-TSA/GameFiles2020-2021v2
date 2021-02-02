@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3789626221407833002}
   - component: {fileID: 4675502966376763464}
   m_Layer: 0
-  m_Name: Big lead (8) 1
+  m_Name: blowable leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8659943070623925175, guid: 994d67037eb88434f8b87042c7b74675, type: 3}
 --- !u!54 &4675502966376763464

@@ -122,9 +122,10 @@ public class ZachLaser : MonoBehaviour
         {
             Depower(powered);
         }
-
+        /*
         laserLineRenderer.SetPosition(0, targetPosition);
         laserLineRenderer.SetPosition(1, endPosition);
+        */
     }
     private void Power(GameObject other)
     {
