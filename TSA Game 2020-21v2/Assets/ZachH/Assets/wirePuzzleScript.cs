@@ -18,7 +18,7 @@ public class wirePuzzleScript : MonoBehaviour
     public Material unselectedMaterial;
     public bool correct = false;
     public bool[,] answerKey = { {true, true, true, false, false }, { false, false, true, false, false}, { false, false, true, true, true} };
-    
+    public activate activate;
     void Start()
     {
         wireMatArr = new Material[rows, columns];
@@ -58,6 +58,11 @@ public class wirePuzzleScript : MonoBehaviour
 
         wireState[(int)selected.x, (int)selected.y] = GameObject.Find(block).GetComponent<state>().wireState;
         correct = checkForCorrect(answerKey);
+        Debug.Log(correct);
+        if (correct == true)
+        {
+            activate.deactivatePuzzle();
+        }
 
     }
 
