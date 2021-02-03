@@ -15,11 +15,24 @@ public class RespawnObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag("Respawn"))
         {
-            transform.position = returnPos;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
+            Debug.Log("respawn");
+            if (gameObject.layer == 16)
+            {
+                gameObject.layer = 0;
+                transform.position = returnPos;
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+            else
+            {
+                transform.position = returnPos;
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+            
         }
     }
 }

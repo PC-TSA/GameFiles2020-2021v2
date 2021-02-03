@@ -4884,6 +4884,22 @@ Transform:
   m_Father: {fileID: 5232987129752381825}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302275651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853799730223258724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462719542e326444aa80cc87223fd1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elecScript: {fileID: 3188648721117267772}
+  onMat: {fileID: 2100000, guid: 2ad3f7409b8e0eb479d809a44ce4dc4c, type: 2}
+  offMat: {fileID: 2100000, guid: a1c36d96a8013ab45aade8e6beb74c6a, type: 2}
+  mr: {fileID: 1943544964680168528}
 --- !u!1 &9116265938207357586
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,12 +5099,24 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2ad3f7409b8e0eb479d809a44ce4dc4c, type: 2}
+      objectReference: {fileID: 2100000, guid: a1c36d96a8013ab45aade8e6beb74c6a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 850ad36558d2d6f4cb4a1e86c8efc7d3, type: 3}
 --- !u!4 &8742846609835358729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 850ad36558d2d6f4cb4a1e86c8efc7d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 9141865063631265250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7853799730223258724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7917291961305824890, guid: 850ad36558d2d6f4cb4a1e86c8efc7d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 9141865063631265250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1943544964680168528 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7216655632450529714, guid: 850ad36558d2d6f4cb4a1e86c8efc7d3,
     type: 3}
   m_PrefabInstance: {fileID: 9141865063631265250}
   m_PrefabAsset: {fileID: 0}

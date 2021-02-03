@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 1475608822308405669}
   - component: {fileID: 1475608822308405668}
   - component: {fileID: 919798561903173042}
+  - component: {fileID: 899685606292913703}
   m_Layer: 16
   m_Name: Magnetic Metal Box
   m_TagString: Electric
@@ -255,8 +256,8 @@ MonoBehaviour:
   cl: {fileID: 1475608822308405668}
   parts: {fileID: 1502887983643572151}
   breakForce: 5
-  attractDis: 10
-  attractForce: 3
+  attractDis: 0
+  attractForce: 0
   isSphere: 0
 --- !u!114 &1475608822308405668
 MonoBehaviour:
@@ -287,6 +288,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &899685606292913703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475608822308405671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03aca9a9a8d900a45b46345d9bd8eedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2318332921482851629
 GameObject:
   m_ObjectHideFlags: 0

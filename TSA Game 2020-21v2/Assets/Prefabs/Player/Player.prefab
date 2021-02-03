@@ -10366,8 +10366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sens: 3
   character: {fileID: 1627712503351652444}
-  yMin: 20
-  yMax: 45
+  yMin: 60
+  yMax: 60
 --- !u!114 &1627712503351652439
 MonoBehaviour:
   m_ObjectHideFlags: 0
