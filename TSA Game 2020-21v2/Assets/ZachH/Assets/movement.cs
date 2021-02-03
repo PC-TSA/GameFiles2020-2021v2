@@ -11,7 +11,6 @@ public class movement : MonoBehaviour
     public CharacterController ch;
     float gravity = 20f;
     float y = 0;
-
     float vSpeed = 0;
 
     private void Start()
