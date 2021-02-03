@@ -256,8 +256,8 @@ MonoBehaviour:
   cl: {fileID: 1475608822308405668}
   parts: {fileID: 1502887983643572151}
   breakForce: 5
-  attractDis: 10
-  attractForce: 3
+  attractDis: 0
+  attractForce: 0
   isSphere: 0
 --- !u!114 &1475608822308405668
 MonoBehaviour:
