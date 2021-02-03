@@ -17,11 +17,14 @@ public class movement : MonoBehaviour
     private void Start()
     {
         sensitivity = speed;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0) return;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         

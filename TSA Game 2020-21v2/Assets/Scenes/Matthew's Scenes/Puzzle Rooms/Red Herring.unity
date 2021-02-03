@@ -422,12 +422,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8a4559450fd64f37a75be3d1dbfa79b, type: 3}
---- !u!198 &157438241 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8162124447889959357, guid: d8a4559450fd64f37a75be3d1dbfa79b,
-    type: 3}
-  m_PrefabInstance: {fileID: 157438240}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &157438242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7418571746550753585, guid: d8a4559450fd64f37a75be3d1dbfa79b,
@@ -1252,10 +1246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78420cf76138042b296f23fbad48f539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCollisions: []
-  electReq: 0
-  ps: {fileID: 157438241}
-  breakForce: 0
 --- !u!114 &808680425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,13 +1258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36dbaf11e691402681569ffdb0f3b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: 1
-  elect: 1
-  cl: {fileID: 808680424}
-  parts: {fileID: 157438241}
-  breakForce: 8
-  attractDis: 10
-  attractForce: 3
 --- !u!135 &808680426
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1836,6 +1819,11 @@ PrefabInstance:
     - target: {fileID: 8464813316481906139, guid: 9f6ce71041e604e688579430f1ea604b,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464813316481906139, guid: 9f6ce71041e604e688579430f1ea604b,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8464813316491770580, guid: 9f6ce71041e604e688579430f1ea604b,
