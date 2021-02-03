@@ -15,9 +15,9 @@ public class SourceReciever : MonoBehaviour
     {
        
     }
-
-   IEnumerator OnCollisionEnter(Collision collision)
-    {
+    
+    IEnumerator OnTriggerEnter(Collider collision)
+{
         Debug.Log("collision");
         GameObject other = collision.gameObject;
 
