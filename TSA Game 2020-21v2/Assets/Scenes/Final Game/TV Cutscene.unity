@@ -404,22 +404,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 1025832373}
   cutImages:
-  - {fileID: 21300000, guid: b1be3a234ef9ff74a8180e6b98403713, type: 3}
-  - {fileID: 21300000, guid: f91d96cfabf39af4ea35c4e9bc793452, type: 3}
-  - {fileID: 21300000, guid: b98c039ff96d42a41b4f1e369775501c, type: 3}
-  - {fileID: 21300000, guid: 6dd3a7dc01b91ef4fbf4915f9b3a92ba, type: 3}
-  - {fileID: 21300000, guid: dd8fd27da033c514a9ffd5cd71048efd, type: 3}
+  - {fileID: 21300000, guid: 9d11e42b1b098fa41b45d70350a60c1a, type: 3}
+  - {fileID: 21300000, guid: a39a10276f1d51c449e9aeac68b805f7, type: 3}
+  - {fileID: 21300000, guid: 5d17d3cd71e4bce47b44c7eb30391d6f, type: 3}
+  - {fileID: 21300000, guid: 7e3458866fc19e140bdd84271481c3fb, type: 3}
+  - {fileID: 21300000, guid: abfc1632b2547414c86222f90ca2e93c, type: 3}
+  - {fileID: 21300000, guid: 80386932514dafc4b9ecefe3f6870414, type: 3}
   textArr:
-  - The summer of 1967 was unlike any that the town of TOWN had previously experienced
-  - ' Several individuals with magical powers would appear every few weeks. When
-    asked about their origin or purpose, they were silent'
-  - Rumours began to circulate that the legendary ORB was the source of these powers,
-    and that someone had discovered the ruined temple where the ORB was kept
-  - GIRL built devices to replicate these magical powers, hoping to gain access to
-    the temple and discover its secrets
-  - 'With her work complete, GIRL sets off into the forest, unsure of what lies ahead... '
+  - 'The summer of 1967 was unlike any that the town of Pine Ridge had previously
+    experienced. '
+  - 'Several individuals with magical powers would appear every few weeks. When asked
+    about their origin or purpose, they were silent. '
+  - 'Rumours began to circulate that these powers came from the legendary Crystal
+    Triad, and that someone had discovered the ruined temple where the Crystal Triad
+    was kept.  '
+  - 'The temple was supposedly built by an ancient civilization and hidden deep in
+    the forest, but no historical record of it exists. '
+  - 'Amber, an avid engineer, built devices to replicate these magical powers, hoping
+    to gain access to the temple and discover its secrets. '
+  - 'With her work complete, Amber sets off into the forest, unsure of what lies
+    ahead... '
   storyText: {fileID: 1184940637}
-  delays: 0500000007000000070000000700000005000000
+  delays: 070000000700000007000000070000000700000007000000
   nextScene: Forest
 --- !u!114 &1025832373
 MonoBehaviour:

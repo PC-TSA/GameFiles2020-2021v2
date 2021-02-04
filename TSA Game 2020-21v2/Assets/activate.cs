@@ -22,6 +22,7 @@ public class activate : MonoBehaviour
         }
     }
 
+    
 
     public void activatePuzzle()
     {

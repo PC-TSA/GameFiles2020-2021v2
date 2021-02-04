@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     public bool here;
     public string go;
     public void GoClick()

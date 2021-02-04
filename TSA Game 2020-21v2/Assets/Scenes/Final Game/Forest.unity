@@ -27023,6 +27023,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1627712503351652441, guid: d4cd10163d6fb0c49967c066fe328805,
+        type: 3}
+      propertyPath: deltaX
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1627712503351652442, guid: d4cd10163d6fb0c49967c066fe328805,
         type: 3}
       propertyPath: speed
@@ -31223,6 +31228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1817021021105360679, guid: 4655e6f7281614179b1fc4265ffb1fe3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4166716359565781752, guid: 4655e6f7281614179b1fc4265ffb1fe3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31276,6 +31286,31 @@ PrefabInstance:
     - target: {fileID: 4166716359565781752, guid: 4655e6f7281614179b1fc4265ffb1fe3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234632279549716983, guid: 4655e6f7281614179b1fc4265ffb1fe3,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234632279549716983, guid: 4655e6f7281614179b1fc4265ffb1fe3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234632279549716983, guid: 4655e6f7281614179b1fc4265ffb1fe3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820691209747784896, guid: 4655e6f7281614179b1fc4265ffb1fe3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820691209747784896, guid: 4655e6f7281614179b1fc4265ffb1fe3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

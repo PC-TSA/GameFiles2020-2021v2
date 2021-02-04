@@ -14,7 +14,12 @@ public class cutSceneScript : MonoBehaviour
     private bool enter = true;
     int time;
     public string nextScene;
-    
+
+    private void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     // Update is called once per frame
     private void OnEnable()
     {

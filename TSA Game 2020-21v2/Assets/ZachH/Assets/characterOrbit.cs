@@ -6,7 +6,7 @@ public class characterOrbit : MonoBehaviour
 {
     public float sens = 3f;
     public Transform character;
-    float deltaX = 140;
+    public float deltaX = 0;
     float deltaY = 0;
     public float yMin = 45;
     public float yMax = 45;
