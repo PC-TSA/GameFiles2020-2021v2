@@ -28,6 +28,7 @@ public class movement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         
         Vector3 moveDirection = new Vector3(horizontal,0f, vertical);
+        moveDirection.Normalize();
         moveDirection = transform.TransformDirection(moveDirection);
         if (Input.GetKey("left shift"))
         {
