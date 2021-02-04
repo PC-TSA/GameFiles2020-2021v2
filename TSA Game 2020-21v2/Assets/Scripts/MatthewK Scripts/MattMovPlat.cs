@@ -98,7 +98,7 @@ public class MattMovPlat : MonoBehaviour
 
     public void Deactivate()
     {
-        Debug.Log("Deactivate Method Running");
+       // Debug.Log("Deactivate Method Running");
         if (isPowered) //if not already powered, then become powered and power the system
         {
             isPowered = false;

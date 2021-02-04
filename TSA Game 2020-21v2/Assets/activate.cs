@@ -40,6 +40,7 @@ public class activate : MonoBehaviour
         player.SetActive(true); 
         endSource.GetComponent<Electricity>().Power();
 
+
     }
     public void OnTriggerEnter(Collider other)
     {

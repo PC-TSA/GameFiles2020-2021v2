@@ -6,7 +6,7 @@ public class characterOrbit : MonoBehaviour
 {
     public float sens = 3f;
     public Transform character;
-    float deltaX = 0;
+    float deltaX = 140;
     float deltaY = 0;
     public float yMin = 45;
     public float yMax = 45;
@@ -14,6 +14,8 @@ public class characterOrbit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Time.timeScale == 0) return;
         float mouseX = Input.GetAxis("Mouse X")*sens;
         float mouseY = Input.GetAxis("Mouse Y")*sens;
         deltaX += mouseX;
