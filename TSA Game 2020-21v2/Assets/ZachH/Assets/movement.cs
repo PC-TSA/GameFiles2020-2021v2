@@ -29,7 +29,7 @@ public class movement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         
         Vector3 moveDirection = new Vector3(horizontal,0f, vertical);
-        moveDirection.Normalize();
+        
         moveDirection = transform.TransformDirection(moveDirection);
         if (Input.GetKey("left shift"))
         {
@@ -40,6 +40,7 @@ public class movement : MonoBehaviour
             sensitivity = speed;
         }
         moveDirection *= sensitivity;
+        moveDirection = Vector3.ClampMagnitude(moveDirection, speed * sensitivity);
 
         if (ch.isGrounded)
             

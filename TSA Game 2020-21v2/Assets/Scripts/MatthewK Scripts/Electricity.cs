@@ -68,6 +68,7 @@ public class Electricity : MonoBehaviour
     {
         //Debug.Log("Power start");
         source = true;
+        elect = true;
         parts.Play();
         GetComponent<CollisionList>().Activate(new List<GameObject>());
         

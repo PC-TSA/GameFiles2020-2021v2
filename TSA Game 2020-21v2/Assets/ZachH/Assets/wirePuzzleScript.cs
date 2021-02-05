@@ -19,6 +19,8 @@ public class wirePuzzleScript : MonoBehaviour
     public bool correct = false;
     public bool[,] answerKey = { {true, true, true, false, false }, { false, false, true, false, false}, { false, false, true, true, true} };
     public activate activate;
+    public GameObject endSource;
+
     void Start()
     {
         wireMatArr = new Material[rows, columns];
@@ -61,7 +63,10 @@ public class wirePuzzleScript : MonoBehaviour
         Debug.Log(correct);
         if (correct)
         {
+
             Debug.Log("deactivating puzzle");
+            endSource.GetComponent<Electricity>().Power();
+
             activate.deactivatePuzzle();
         }
 

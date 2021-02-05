@@ -11,7 +11,6 @@ public class activate : MonoBehaviour
     public GameObject powerSource;
     public GameObject endSource;
     public GameObject player;
-    public wirePuzzleScript wps;
 
     // Update is called once per frame
     private void Start()
@@ -19,6 +18,10 @@ public class activate : MonoBehaviour
         if (startActive)
         {
             activatePuzzle();
+        }
+        else
+        {
+            deactivatePuzzle();
         }
     }
 
@@ -38,8 +41,9 @@ public class activate : MonoBehaviour
         wirePuzzle.GetComponent<wirePuzzleScript>().enabled = false;
         puzzleCamera.SetActive(false);
         //playerCamera.SetActive(true);
-        player.SetActive(true); 
-        endSource.GetComponent<Electricity>().Power();
+        player.SetActive(true);
+        
+        
 
 
     }
