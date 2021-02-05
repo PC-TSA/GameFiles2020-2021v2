@@ -6,6 +6,8 @@ public class GiveInfo : MonoBehaviour
 {
     public string info;
     private GameObject txt;
+    public bool displayOnce = true;
+    private bool display = true;
     // Start is called before the first frame update
     void Awake()
     {
@@ -32,7 +34,7 @@ public class GiveInfo : MonoBehaviour
     }*/
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && display)
         {
             txt.SetActive(true);
         }
@@ -42,6 +44,10 @@ public class GiveInfo : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             txt.SetActive(false);
+            if(!displayOnce)
+            {
+                display = false;
+            }
         }
     }
 }
