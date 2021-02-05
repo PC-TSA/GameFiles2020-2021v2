@@ -11,6 +11,7 @@ TagManager:
   - Lava Powered
   - Return
   - magnetic
+  - NoJump
   layers:
   - Default
   - TransparentFX

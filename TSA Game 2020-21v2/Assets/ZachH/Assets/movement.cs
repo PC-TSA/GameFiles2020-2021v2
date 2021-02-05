@@ -12,6 +12,7 @@ public class movement : MonoBehaviour
     float gravity = 20f;
     float y = 0;
     float vSpeed = 0;
+    public bool canJump = false;
 
     private void Start()
     {
@@ -44,7 +45,7 @@ public class movement : MonoBehaviour
             
         {
             vSpeed = -1;
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && canJump)
             {
                 vSpeed = jumpSpeed;
             }
@@ -57,4 +58,26 @@ public class movement : MonoBehaviour
         
         
     }
+
+   /* public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.gameObject);
+        GameObject go = other.gameObject;
+        if (go.CompareTag("NoJump"))
+        {
+            canJump = false;
+        }
+        else
+        {
+            canJump = true;
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        GameObject go = other.gameObject;
+        if (go.CompareTag("NoJump"))
+        {
+            canJump = true;
+        }
+    }*/
 }
