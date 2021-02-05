@@ -25,6 +25,7 @@ public class RespawnObject : MonoBehaviour
                 transform.position = returnPos;
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
+                StartCoroutine(magnetReset());
             }
             else
             {
@@ -34,5 +35,11 @@ public class RespawnObject : MonoBehaviour
             }
             
         }
+    }
+
+    private IEnumerator magnetReset()
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameObject.layer = 16;
     }
 }

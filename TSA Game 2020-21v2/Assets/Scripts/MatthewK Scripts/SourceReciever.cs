@@ -28,11 +28,11 @@ public class SourceReciever : MonoBehaviour
                 GetComponent<Electricity>().source = true;
                 GetComponent<Electricity>().Power();
                 //Destroy(other);
-                other.layer = 0;
-                other.GetComponent<Electricity>().source = false;
+               // other.layer = 0;
+              //  other.GetComponent<Electricity>().source = false;
                 yield return new WaitForSeconds(0.5f);
                 other.GetComponent<Rigidbody>().freezeRotation = true;
-                other.GetComponent<Rigidbody>().isKinematic = false;
+                other.GetComponent<Rigidbody>().isKinematic = true;
                 Debug.Log("destroyed");
             }
         }
