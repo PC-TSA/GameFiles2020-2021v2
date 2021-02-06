@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Game/Temple.unity
     guid: e074c8c9f0543e24b92caad85d6c3bc8
+  - enabled: 1
+    path: Assets/Scenes/Final Game/Final Cutscene.unity
+    guid: 6fe5e35cde857d542828f490e8f15257
   m_configObjects: {}
