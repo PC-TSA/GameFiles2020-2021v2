@@ -131,6 +131,7 @@ public class CollisionList : MonoBehaviour
                 //go.GetComponent<Electricity>().parts.Play();
             }
         }
+        //Activate over distance
         if (GetComponent<ElectActivate>() != null && GetComponent<ElectActivate>().doElect)
         {
             if (!GetComponent<ElectActivate>().go.GetComponent<Electricity>().source && !chekd.Contains(GetComponent<ElectActivate>().go) && !GetComponent<ElectActivate>().go.CompareTag("Lava Powered"))
@@ -153,6 +154,7 @@ public class CollisionList : MonoBehaviour
             }
             
         }
+        //Deactivate over distance
         if (GetComponent<ElectActivate>() != null && GetComponent<ElectActivate>().doElect)
         {
             if (!GetComponent<ElectActivate>().go.GetComponent<Electricity>().source && !chekd.Contains(GetComponent<ElectActivate>().go) && !GetComponent<ElectActivate>().go.CompareTag("Lava Powered"))
@@ -197,6 +199,7 @@ public class CollisionList : MonoBehaviour
             }
             
         }
+        //Check for sources over distance electricity transfers
         if (GetComponent<ElectActivate>() != null)
         {
             if(GetComponent<ElectActivate>().doElect)
