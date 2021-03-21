@@ -7,7 +7,17 @@ public class Blow : MonoBehaviour
     public float strength;
     
     public float recoil;
-    
+    public float minRange = -1f;
+    public float maxRange = 1f; 
+    private void Update()
+    {
+        float range = Input.mouseScrollDelta.y;
+        
+        //range = Mathf.Clamp(range, minRange, maxRange);
+        Debug.Log("R: " + range);
+        transform.localScale += new Vector3(0f,0f,1f) * range;
+        
+    }
     private void OnTriggerStay(Collider other)
     {
         if(Input.GetMouseButton(0))
