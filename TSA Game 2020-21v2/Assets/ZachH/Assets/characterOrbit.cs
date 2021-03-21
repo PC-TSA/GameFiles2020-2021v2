@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class characterOrbit : MonoBehaviour
 {
+    public float baseSens = 3f;
     public float sens = 3f;
     public Transform character;
     public float deltaX = 0;
     float deltaY = 0;
     public float yMin = 45;
     public float yMax = 45;
- 
+    private void Awake()
+    {
+        sens = PlayerPrefs.GetFloat("sens");
+    }
     // Update is called once per frame
     void Update()
     {

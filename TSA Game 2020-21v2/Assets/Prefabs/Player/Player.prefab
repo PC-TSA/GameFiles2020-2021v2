@@ -10364,7 +10364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  shiftMultiplier: 1.25
+  shiftMultiplier: 10
   ch: {fileID: 1627712503351652443}
   canJump: 0
 --- !u!143 &1627712503351652443
@@ -10397,6 +10397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29fcb1bff806a9429bc950dc56e4676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSens: 3
   sens: 3
   character: {fileID: 1627712503351652444}
   deltaX: 0
