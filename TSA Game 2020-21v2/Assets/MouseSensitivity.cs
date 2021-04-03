@@ -9,8 +9,8 @@ public class MouseSensitivity : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-
-        GetComponent<Slider>().value = PlayerPrefs.GetFloat("sens")/2f/player.GetComponent<characterOrbit>().baseSens;
+        
+        GetComponent<Slider>().value = PlayerPrefs.GetFloat("sens")/*/2f/player.GetComponent<characterOrbit>().baseSens*/;
 
         //SetSens(GetComponent<Slider>().value);
     }
@@ -18,7 +18,8 @@ public class MouseSensitivity : MonoBehaviour
     public void SetSens(float newSens)
     {
         player.GetComponent<characterOrbit>().sens = newSens * player.GetComponent<characterOrbit>().baseSens * 2;
-        Remember.remSens = player.GetComponent<characterOrbit>().sens;
-
+       // Remember.remSens = player.GetComponent<characterOrbit>().sens;
+        PlayerPrefs.SetFloat("sens", newSens);
+        PlayerPrefs.Save();
     }
 }

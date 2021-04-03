@@ -13,7 +13,7 @@ public class characterOrbit : MonoBehaviour
     public float yMax = 45;
     private void Awake()
     {
-        sens = PlayerPrefs.GetFloat("sens");
+        sens = PlayerPrefs.GetFloat("sens") * 2 * baseSens;
     }
     // Update is called once per frame
     void Update()
