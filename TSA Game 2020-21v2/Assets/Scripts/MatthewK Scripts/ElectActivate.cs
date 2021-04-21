@@ -8,8 +8,10 @@ public class ElectActivate : MonoBehaviour
     private Electricity eleComp;
     public bool doElect = false;
     public bool doMov = false;
+    public bool doConvey = false;
     public bool activateOnce = true; //if true, the platform will not deactivate when the power stops
     private MattMovPlat mmp;
+    //private Convey conveyIt;
     private Electricity eOther;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,10 @@ public class ElectActivate : MonoBehaviour
         {
             eOther = go.GetComponent<Electricity>();
         }
+        /*if (doConvey)
+        {
+            conveyIt = go.GetComponent<Convey>();
+        }*/
     }
 
     // Update is called once per frame
@@ -34,6 +40,10 @@ public class ElectActivate : MonoBehaviour
             if (doMov)
             {
                 mmp.Activate();
+            }
+            if(doConvey)
+            {
+                go.GetComponent<Convey>().on = true;
             }
             /*
             if (doElect)
@@ -49,11 +59,16 @@ public class ElectActivate : MonoBehaviour
             {
                 mmp.Deactivate();
             }
+            if (doConvey)
+            {
+                go.GetComponent<Convey>().on = false;
+            }
             /*
             if (doElect)
             {
                 eOther.Depower();
             }*/
         }
+        
     }
 }
