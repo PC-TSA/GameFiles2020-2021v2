@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneChangeScript : MonoBehaviour
 {
     public string scene = "Temple";
+    public Animator transition;
+    public float transitionTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,21 @@ public class SceneChangeScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        LoadNextLevel();
+    }
+    public void LoadNextLevel()
+    {
+        StartCoroutine(LoadLevel());
+    }
+    IEnumerator LoadLevel()
+    {
+        //Play animation
+        transition.SetTrigger("Start");
+        
+        //Wait
+        yield return new WaitForSeconds(transitionTime);
+        //Load scene
         SceneManager.LoadScene(scene);
     }
-}
+
+}   
