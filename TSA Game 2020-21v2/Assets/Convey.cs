@@ -16,7 +16,7 @@ public class Convey : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (on) {
+        if (on && Time.deltaTime > 0) {
             Vector3 pos = rb.position;
             rb.position += Vector3.right * speed * Time.fixedDeltaTime;
             rb.MovePosition(pos);
