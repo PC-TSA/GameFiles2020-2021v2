@@ -13,6 +13,10 @@ public class cutSceneScript : MonoBehaviour
     public int[] delays;
     private bool enter = true;
     int time;
+    //The delays are divided by this number to determine how often the player can skip. Larger would be better, but I am reluctant.
+    public float timeBreaker = 360;
+    //Used to separate images even when mouse is pressed.
+    public float timeBetween = .5f;
     public string nextScene;
 
     private void Start()
@@ -30,13 +34,25 @@ public class cutSceneScript : MonoBehaviour
     {
         for (var i = 0; i < cutImages.Length; i++)
         {
-            Debug.Log(cutImages[i].name);
-            mainImage.sprite = cutImages[i];
-            storyText.text = textArr[i];
-            yield return new WaitForSeconds(delays[i]);
+            ChangeImage(i);
+            yield return new WaitForSeconds(timeBetween);
+            for (int breaker = 0; breaker < timeBreaker; breaker++)
+            {
+                if (Input.anyKey)
+                {
+                    break;
+                }
+                yield return new WaitForSeconds(delays[i]/timeBreaker);
+            }
+            
         }
         SceneManager.LoadScene(nextScene);
     }
-
+    private void ChangeImage(int i)
+    {
+        Debug.Log(cutImages[i].name);
+        mainImage.sprite = cutImages[i];
+        storyText.text = textArr[i];
+    }
     
 }
