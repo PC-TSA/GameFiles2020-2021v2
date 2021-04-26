@@ -19,6 +19,8 @@ public class laserScript2 : MonoBehaviour
     public float particleScale;
     public float particleStart;
     public float liveCount = 1;
+
+    
     // Update is called once per frame
     private void Start()
     {
@@ -51,8 +53,37 @@ public class laserScript2 : MonoBehaviour
             maxRange = 1;
             minRange = -1;
         }
+        /*//Matthew's attempt to fix the magnet.
+         Ray stopRay = new Ray(magnet.position, transform.forward);
+        RaycastHit[] stopHit = Physics.RaycastAll(stopRay, range);
+        //RaycastHit[] stopHit = Physics.RaycastAll(magnet.position, transform.forward, range);
 
         transform.position += magnetEmit.transform.forward * range;
+        foreach (RaycastHit rh in stopHit)
+        {
+            Debug.DrawLine(magnet.position, rh.point, Color.white, .1f, true);
+            Debug.Log("There is a block"); 
+            if (rh.distance < Vector3.Distance(magnet.position, transform.position))
+            {
+                transform.position = rh.point;
+                
+                Debug.Log("replaced");
+            }
+        }*/
+        transform.position += magnetEmit.transform.forward * range;
+
+        //Stuff added by Matthew to stop magnet clipping:
+        int bitLayerMask = ~magnetLayer.value;//This int represents set of layers: all except (that is what the ~ operator does) the magnet layer
+        if (Physics.Raycast(magnet.position, magnet.TransformDirection(Vector3.forward), out hit, Vector3.Distance(magnet.position, transform.position), bitLayerMask))
+        {
+            transform.position = hit.point;
+        }
+        else 
+        {
+            transform.localPosition = originTrans;
+            
+        }
+        //End Matt stuff
 
         Debug.Log(range);
         if (Input.GetMouseButton(0))
@@ -64,11 +95,15 @@ public class laserScript2 : MonoBehaviour
             { 
                 Debug.Log("HIT");
 
-               
 
 
-             hit.collider.transform.position = transform.position;
-        }
+
+                //hit.collider.transform.position = transform.position;
+                Vector3 hitScale = hit.collider.transform.localScale;
+                hit.collider.gameObject.GetComponent<Rigidbody>().MovePosition(transform.position - magnetEmit.transform.forward * Mathf.Max(hitScale.x, Mathf.Max(hitScale.y, hitScale.z)));
+                //hit.collider.gameObject.GetComponent<Rigidbody>().
+                hit.collider.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            }
 
 
         
