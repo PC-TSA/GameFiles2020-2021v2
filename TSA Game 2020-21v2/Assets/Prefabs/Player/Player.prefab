@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 10
   recoil: 0.001
+  minRange: -1
+  maxRange: 1
 --- !u!135 &1346510434673985487
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -667,6 +669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 30
   recoil: 0.0001
+  minRange: -1
+  maxRange: 1
 --- !u!135 &1346510435472119678
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10585,7 +10589,7 @@ MonoBehaviour:
   magnetEmit: {fileID: 1627712503334886050}
   range: 0
   maxRange: 2.5
-  minRange: -2.5
+  minRange: 0
   liveMaxRange: 0
   liveMinRange: 0
   originTrans: {x: 0, y: 0, z: 0}
