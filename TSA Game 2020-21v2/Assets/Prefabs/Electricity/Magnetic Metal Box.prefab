@@ -255,6 +255,8 @@ MonoBehaviour:
   elect: 0
   cl: {fileID: 1475608822308405668}
   parts: {fileID: 1502887983643572151}
+  audioBuzz: {fileID: 2678878231335458798, guid: 4c4c1e8af72c6cf418251a79aed79a5a,
+    type: 3}
   breakForce: 5
   attractDis: 0
   attractForce: 0

@@ -122,6 +122,7 @@ public class CollisionList : MonoBehaviour
     {
         GetComponent<Electricity>().elect = true;
         ps.Play();
+        gameObject.GetComponent<Electricity>().audioBuzz.GetComponent<AudioSource>().mute = false;
         foreach (GameObject go in currentCollisions.ToArray())
         {
             if (!go.GetComponent<Electricity>().source && !chekd.Contains(go) && !go.CompareTag("Lava Powered"))
@@ -145,6 +146,7 @@ public class CollisionList : MonoBehaviour
     {
         GetComponent<Electricity>().elect = false;
         ps.Stop();
+        gameObject.GetComponent<Electricity>().audioBuzz.GetComponent<AudioSource>().mute = true;
         foreach (GameObject go in currentCollisions.ToArray())
         {
             if(!go.GetComponent<Electricity>().source && !chekd.Contains(go) && !go.CompareTag("Lava Powered"))

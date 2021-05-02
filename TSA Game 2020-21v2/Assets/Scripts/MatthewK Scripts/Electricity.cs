@@ -10,13 +10,17 @@ public class Electricity : MonoBehaviour
     //public List<GameObject> energizing;
     public CollisionList cl;
     public ParticleSystem parts;
+    public static GameObject buzzer; //Don't set this to anything using the Inspector. It will be handled through scripts.
+    public GameObject audioBuzz;
     public float breakForce;
     public float attractDis;
     public float attractForce;
     public bool isSphere = false;
+    
     // Start is called before the first frame update
     void Start()
     {
+        SoundSetUp();
         if (CompareTag("Lava Powered"))
         {
             Debug.Log("Lava thing");
@@ -46,7 +50,14 @@ public class Electricity : MonoBehaviour
         }
         cl.ps = parts;
     }
+    private void SoundSetUp()
+    {
+        if (buzzer == null) buzzer = (GameObject)Resources.Load("Buzzer");
+        audioBuzz = Instantiate(buzzer);
+        audioBuzz.transform.SetParent(this.transform);
+        audioBuzz.transform.position = this.transform.position;
 
+    }
     // Update is called once per frame
     void FixedUpdate()
     {   /*
@@ -70,6 +81,7 @@ public class Electricity : MonoBehaviour
         source = true;
         elect = true;
         parts.Play();
+        audioBuzz.GetComponent<AudioSource>().mute = false;
         GetComponent<CollisionList>().Activate(new List<GameObject>());
         
     }
@@ -78,7 +90,8 @@ public class Electricity : MonoBehaviour
         source = false;
         parts.Stop();
         GetComponent<CollisionList>().Deactivate(new List<GameObject>());
-        
+        audioBuzz.GetComponent<AudioSource>().mute = true;
+
     }
 
     /*private void OnCollisionEnter(Collision collision)
