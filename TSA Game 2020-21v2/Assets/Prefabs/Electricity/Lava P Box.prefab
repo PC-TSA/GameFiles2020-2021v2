@@ -194,6 +194,7 @@ MonoBehaviour:
   elect: 0
   cl: {fileID: 6668711683163897454}
   parts: {fileID: 6379243863221551331}
+  audioBuzz: {fileID: 0}
   breakForce: 5
   attractDis: 10
   attractForce: 3
