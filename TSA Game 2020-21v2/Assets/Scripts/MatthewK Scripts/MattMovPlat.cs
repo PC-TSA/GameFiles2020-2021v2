@@ -23,11 +23,12 @@ public class MattMovPlat : MonoBehaviour
     Vector3 nextVector;
     public bool stopMoving = false;
     public bool startActive = true;
-
+    private Rigidbody rb;
     // Start is called before the first frame update
 
     void Start()
     {
+        if (GetComponent<Rigidbody>() != null) { rb = GetComponent<Rigidbody>(); }
         movementPointTransforms = path.GetComponentsInChildren<Transform>();
         Transform[] temp = new Transform[movementPointTransforms.Length - 1];
         for (int i = 0; i < movementPointTransforms.Length - 1; i++)
@@ -46,6 +47,7 @@ public class MattMovPlat : MonoBehaviour
             }
         }
         transform.position = movementPointTransforms[0].position;
+        
         if (!needsElec || startActive)
         {
             Activate();
@@ -60,6 +62,7 @@ public class MattMovPlat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(needsElec)
         {
             if(GetComponent<Electricity>() != null)
@@ -75,7 +78,7 @@ public class MattMovPlat : MonoBehaviour
                 }
             }
         }
-        if (isPowered)
+        if (rb == null && isPowered)
         {
             if (!stopMoving)
             {
@@ -83,7 +86,13 @@ public class MattMovPlat : MonoBehaviour
             }
         }
     }
-
+    private void FixedUpdate()
+    {
+        if (rb != null && isPowered && !stopMoving)
+        {
+            RigidbodyMovePlatform();
+        }
+    }
     public void Activate()
     {
         Debug.Log("Activate Method Running");
@@ -91,7 +100,7 @@ public class MattMovPlat : MonoBehaviour
         {
             isPowered = true;
             isMoving = true;
-            nextVector = movementPointTransforms[pointIndex].position - transform.position;
+            nextVector = Vector3.Normalize(movementPointTransforms[pointIndex].position - transform.position);
 
         }
     }
@@ -105,15 +114,37 @@ public class MattMovPlat : MonoBehaviour
             isMoving = false;
         }
     }
+    public void RigidbodyMovePlatform()
+    {
+        
+        if (isMoving)
+        {
 
+            
+                transform.gameObject.GetComponent<Rigidbody>().MovePosition(transform.position + nextVector * movespeed * 0.1f);
+            
+
+        }
+        SharedFixedOrNot();
+
+    }
     public void MovePlatform()
     {
         Debug.Log("Move");
         if (isMoving)
         {
-            transform.Translate(nextVector * Time.deltaTime * movespeed * 0.1f);
+            
+            
+                transform.Translate(nextVector * Time.deltaTime * movespeed * 0.1f);//changed for rigidbodies
+            
+            
         }
-        if (Vector3.Distance(movementPointTransforms[pointIndex].position, transform.position) < 0.1f)
+        SharedFixedOrNot();
+
+    }
+    private void SharedFixedOrNot()
+    {
+        if (isMoving && Vector3.Distance(movementPointTransforms[pointIndex].position, transform.position) < 0.1f)
         {
             isMoving = false;
             pointIndex++;
@@ -137,11 +168,10 @@ public class MattMovPlat : MonoBehaviour
             if (wait < 0)
             {
                 isMoving = true;
-                nextVector = movementPointTransforms[pointIndex].position - transform.position;
+                nextVector = Vector3.Normalize(movementPointTransforms[pointIndex].position - transform.position);
 
             }
 
         }
-
     }
 }

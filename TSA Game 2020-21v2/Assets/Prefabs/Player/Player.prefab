@@ -370,7 +370,7 @@ MonoBehaviour:
   laserMaxLength: 100
   damage: 50
   manaCost: 50
-  snapDis: 0.1
+  snapDis: 0.2
   lightnings: {fileID: 0}
   powered: {fileID: 0}
 --- !u!120 &1346510434953881757
