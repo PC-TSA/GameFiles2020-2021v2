@@ -30,11 +30,15 @@ public class MattMovPlat : MonoBehaviour
     {
         if (GetComponent<Rigidbody>() != null) { rb = GetComponent<Rigidbody>(); }
         movementPointTransforms = path.GetComponentsInChildren<Transform>();
+
         Transform[] temp = new Transform[movementPointTransforms.Length - 1];
         for (int i = 0; i < movementPointTransforms.Length - 1; i++)
         {
-            temp[i] = movementPointTransforms[i + 1];
-            Debug.Log(i);
+            
+                temp[i] = movementPointTransforms[i + 1];
+            
+            
+            //Debug.Log(i);
         }
         movementPointTransforms = temp;
 
@@ -88,6 +92,21 @@ public class MattMovPlat : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (needsElec)
+        {
+            if (GetComponent<Electricity>() != null)
+            {
+                if (GetComponent<Electricity>().elect)
+                {
+                    Activate();
+                }
+                else
+                {
+                    isPowered = false;
+                    Deactivate();
+                }
+            }
+        }
         if (rb != null && isPowered && !stopMoving)
         {
             RigidbodyMovePlatform();
@@ -149,7 +168,7 @@ public class MattMovPlat : MonoBehaviour
             isMoving = false;
             pointIndex++;
             wait = waitTime;
-            if (pointIndex > movementPointTransforms.Length - 1)
+            if (pointIndex > movementPointTransforms.Length - 1/* || !movementPointTransforms[pointIndex].gameObject.activeSelf*/)
             {
                 if (type == 0)
                 {
@@ -168,7 +187,15 @@ public class MattMovPlat : MonoBehaviour
             if (wait < 0)
             {
                 isMoving = true;
-                nextVector = Vector3.Normalize(movementPointTransforms[pointIndex].position - transform.position);
+                if (Vector3.Distance(movementPointTransforms[pointIndex].position, transform.position) != 0)
+                {
+                    nextVector = Vector3.Normalize(movementPointTransforms[pointIndex].position - transform.position);
+                }
+                else
+                {
+                    nextVector = Vector3.zero;
+                }
+                
 
             }
 

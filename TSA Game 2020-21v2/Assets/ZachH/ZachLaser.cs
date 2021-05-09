@@ -85,8 +85,8 @@ public class ZachLaser : MonoBehaviour
         Ray ray = new Ray(targetPosition, direction);
         RaycastHit raycastHit;
         Vector3 endPosition = targetPosition + (length * direction);
-
-        if (Physics.Raycast(ray, out raycastHit, length))
+        int bitLayerMask = ~(LayerMask.GetMask("Invisible"));
+        if (Physics.Raycast(ray, out raycastHit, length, bitLayerMask))
         {
             endPosition = raycastHit.point;
             GameObject other = raycastHit.collider.gameObject;
@@ -135,6 +135,7 @@ public class ZachLaser : MonoBehaviour
         other.GetComponent<Electricity>().parts.Play();
         other.GetComponent<CollisionList>().Activate(new List<GameObject>());
         */
+        if (powered != null) { powered.GetComponent<Electricity>().Depower(); }
         other.GetComponent<Electricity>().Power();
         powered = other.gameObject;
     }
