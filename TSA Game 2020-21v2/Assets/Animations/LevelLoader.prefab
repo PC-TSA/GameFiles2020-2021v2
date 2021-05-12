@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 4798092965516227489}
   - component: {fileID: 1982769522999068650}
   - component: {fileID: 3545266088782206213}
+  - component: {fileID: 7484556218384010482}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -206,6 +207,38 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7484556218384010482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009447126304170608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9360025d1cfde3d4cadec1d5862352c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300000, guid: 1371f33eb6b47a54d95a1fcb400dec67, type: 3}
+  - {fileID: 21300000, guid: b23d74fffde0ecd4db78cbef59836260, type: 3}
+  - {fileID: 21300000, guid: a66c122fa52d7d741b3415aa2b3773cb, type: 3}
+  - {fileID: 21300000, guid: 3fc2ece7d823c6048b0f1eba01800e92, type: 3}
+  - {fileID: 21300000, guid: e83eecd14b4f0e94dae84844c7e79c08, type: 3}
+  - {fileID: 21300000, guid: 121350e9d1b5b974a928f90abb0b2486, type: 3}
+  - {fileID: 21300000, guid: 91b120d508537c543921bed5936b7224, type: 3}
+  - {fileID: 21300000, guid: ce107f09014361d4ebc253d55556cec0, type: 3}
+  - {fileID: 21300000, guid: 988a2a3de0e39084f963c3bd844831c4, type: 3}
+  - {fileID: 21300000, guid: 2720129ede9fb824999cbce1f3cd962d, type: 3}
+  - {fileID: 21300000, guid: 3965487dd1013734f8ebff155c47b3f2, type: 3}
+  - {fileID: 21300000, guid: d4f7136f57b7d054cb462872668d1f99, type: 3}
+  - {fileID: 21300000, guid: 7a00aff707de7e2469e9d4e379138259, type: 3}
+  - {fileID: 21300000, guid: d3effe9c7f709d9469041c4f53235ef2, type: 3}
+  - {fileID: 21300000, guid: 0b4f893c9757af245a2b131e58fc4088, type: 3}
+  - {fileID: 21300000, guid: 9f778be3236cfb348bd427a1ed0ea68d, type: 3}
+  - {fileID: 21300000, guid: bc8fab3ae426bd54997af165f62a1dcd, type: 3}
+  - {fileID: 21300000, guid: 794e2b5d2cefb1a41b95973fabdbc2f0, type: 3}
+  framesPerSec: 4
 --- !u!1 &6605493235266088860
 GameObject:
   m_ObjectHideFlags: 0
